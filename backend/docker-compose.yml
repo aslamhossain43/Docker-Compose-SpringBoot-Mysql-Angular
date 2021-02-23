@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  mysql-db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=MyAppDb
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+    ports:
+      - "3306:3306"
+
+  api:
+    depends_on:
+      - mysql-db
+    build: ./
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    environment:
+      - DATABASE_HOST=mysql-db
+      - DATABASE_USER=user
+      - DATABASE_PASSWORD=password
+      - DATABASE_NAME=MyAppDb
+      - DATABASE_PORT=3306
+      
+      
+      
+      
+      
+      
