@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root'
 })
 export class ServiceService {
-  private host = 'http://172.22.0.3:8080/api';
+  private host = 'http://localhost:8080/api';
   private getUrl = this.host + '/get';
   private addUrl = this.host + '/add';
   private deleteUrl = this.host + '/delete/';
