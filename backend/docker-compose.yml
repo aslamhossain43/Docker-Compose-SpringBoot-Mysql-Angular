@@ -28,12 +28,11 @@ services:
       
   app:
     depends_on:
-      - mysql-db
       - api
     build: .././app/app
     restart: on-failure
     ports:
-      - "80:80"
+      - "4200:4200"
     environment:
       - API_HOST=api
       
