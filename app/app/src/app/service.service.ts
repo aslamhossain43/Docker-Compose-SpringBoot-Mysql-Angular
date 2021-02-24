@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Employee, IEmployee } from './app.model';
-import { environment } from 'src/environments/environment';
+import { IEmployee } from './app.model';
+import { environment } from 'src/environments/environment.prod';
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-  private host = environment.API_HOST;
+  private host = 'http://172.22.0.3:8080/api';
   private getUrl = this.host + '/get';
   private addUrl = this.host + '/add';
   private deleteUrl = this.host + '/delete/';

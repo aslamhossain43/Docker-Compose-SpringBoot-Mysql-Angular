@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  API_HOST: 'http://api:8080/api'
 };
