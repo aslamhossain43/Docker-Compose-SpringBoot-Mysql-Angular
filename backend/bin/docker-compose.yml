@@ -26,17 +26,6 @@ services:
       - DATABASE_NAME=MyAppDb
       - DATABASE_PORT=3306
       
-  app:
-    depends_on:
-      - mysql-db
-      - api
-    build: .././app/app
-    restart: on-failure
-    ports:
-      - "80:80"
-    environment:
-      - API_HOST=api
-      
       
       
       

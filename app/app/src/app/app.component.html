@@ -1,0 +1,9 @@
+<div>
+  <button (click)="add()">Add</button>
+  <p *ngFor="let i of employees;let ind=index">
+    {{ind+1}}<br>
+    {{i.name}}<br>
+    {{i.address}}<br>
+    <button (click)="delete(i.id)">Delete</button>
+</p>
+</div>
